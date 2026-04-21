@@ -12,6 +12,8 @@
     --light-blueviolet:rgb(239, 224, 252);
     --dark-orange:rgb(245, 73, 0);
     --light-orange:rgb(251, 228, 212);
+    --main-border:2px solid rgba(229, 231, 235, 0.8);
+    --main-border-radius: 15px
 }
 
 .whole-page{
@@ -185,7 +187,7 @@
     }
     nav{
         grid-column: 3/13;
-        grid-row: 1/3;
+        grid-row: 1/2;
         margin: 25px 0 25px 25px;
         display: flex;
         flex-direction: row;
@@ -280,13 +282,19 @@
     }
     section{
         grid-column: 3/13;
-        grid-row: 3/13;
+        grid-row: 2/13;
         width: 100%;
         height: 100%;
         padding-left: 25px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        gap: 20px;
         .status-box{
             display: flex;
             gap: 20px;
+            grid-column: 1/13;
+            grid-row: 1/2;
             div{
                 border: 2px solid rgba(229, 231, 235, 0.8);
                 border-radius: 20px;
@@ -313,6 +321,89 @@
                     color: red;
                     font-weight: 500;
                 }
+            }
+        }
+        .newest-activities{
+            grid-row: 2/4;
+            grid-column: 1/5;
+            padding: 25px;
+            border: var(--main-border);
+            border-radius: var(--main-border-radius);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 15px;
+            h3{
+                font-weight: 500;
+                align-self: flex-start;
+                margin-bottom: 15px;
+            }
+            .activity{
+                display: flex;
+                background-color: lightgray;
+                justify-content: flex-start;
+                width: 100%;
+                padding: 10px;
+                column-gap:15px ;
+                border-radius: 15px;
+                border-left: 4px solid gray;
+                .logo-box{
+                    background-color: gray;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 7px;
+                    border-radius: 50%;
+                    svg{
+                        width: 16px;
+                        color: darkgray;
+                    }
+                }
+                .text-box{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 5px;
+                    padding: 0;
+                    border: none;
+                    width: 100%;
+                    p:nth-child(2){
+                        font-size: 14px;
+                    }
+                    p:last-child{
+                        font-size: 12px;
+                        margin-top: 10px;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .activity:nth-child(2){
+                background-color: rgb(231, 246, 255);
+                border-left: var(--dark-blue) 4px solid;
+                .logo-box{
+                    background-color: var(--light-blue);
+                    svg{
+                        color: var(--dark-blue);
+                    }
+                }
+
+            }
+            .activity:nth-child(3){
+                background-color: rgb(233, 255, 233);
+                border-left: var(--dark-green) 4px solid;
+                .logo-box{
+                    background-color: var(--light-green);
+                    svg{
+                        color: var(--dark-green);
+                    }
+                }
+
+            }
+            a{
+                text-decoration: none;
+                color: var(--dark-blue);
+                margin-top: 15px;
             }
         }
     }
