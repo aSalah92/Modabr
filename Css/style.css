@@ -406,5 +406,154 @@
                 margin-top: 15px;
             }
         }
+        .last-transaction{
+            grid-row: 2/6;
+            grid-column: 5/13;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            border: var(--main-border);
+            border-radius: var(--main-border-radius);
+            padding: 25px;
+            div{
+                font-size: 12px;
+            }
+            .title-link{
+                display: flex;
+                justify-content: space-between;
+            }
+            .rows{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 100px;
+            }
+            .titles{
+                display: flex;
+                justify-content: space-between;
+                p:first-child{
+                    min-width: 100px;
+                }
+                p:nth-child(2){
+                    width: 80px;
+                }
+            }
+            .transaction-rows{
+                .to-whom{
+                    min-width: 140px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    column-gap: 5px;
+                    .img-box{
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        img{
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                        svg{
+                            width: 40%;
+                        }
+                    }
+                    .text-box{
+                        width: 80%;
+                        p:first-child{
+                            font-weight: 500;
+                        }
+                        p:last-child{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .type{
+                    min-width: 90px;
+                    .box{
+                        background-color: lightgray;
+                        width: fit-content;
+                        padding: 5px 10px;
+                        border-radius: 15px;
+                        svg{
+                            width: 11px;
+                        }
+                    }
+                }
+                .date{
+                    min-width: 100px;
+                }
+                .statue{
+                    background-color: gray;
+                    min-width: 45px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                }
+            }
+            .transaction-rows:nth-child(4){
+                .to-whom{
+                    .img-box{
+                        background-color: var(--light-orange);
+                        svg{
+                            color: var(--dark-orange);
+                        }
+                    }
+                }
+            }
+            .transaction-rows:nth-child(5){
+                .to-whom{
+                    .img-box{
+                        background-color: var(--light-blue);
+                        svg{
+                            color: var(--dark-blue);
+                        }
+                    }
+                }
+            }
+            .transaction-rows:nth-child(8){
+                .to-whom{
+                    .img-box{
+                        background-color: rgb(255, 197, 197);
+                        svg{
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .transaction-rows:nth-child(9){
+                .to-whom{
+                    .img-box{
+                        background-color: var(--light-blueviolet);
+                        svg{
+                            color: var(--dark-blueviolet);
+                        }
+                    }
+                }
+            }
+            .transaction-rows:nth-child(10){
+                .to-whom{
+                    .img-box{
+                        background-color: lightcyan;
+                        svg{
+                            color: darkcyan;
+                        }
+                    }
+                }
+            }
+            .transaction-rows:nth-child(11){
+                .to-whom{
+                    .img-box{
+                        background-color: var(--light-green);
+                        svg{
+                            color: var(--dark-green);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
