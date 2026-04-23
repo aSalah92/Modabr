@@ -27,9 +27,10 @@ body{
 
 .whole-page{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(12, auto);
     /* position: relative; */
+    margin-right: 200px;
     .sidebar{
         height: 100vh;
         min-width: 14vw;
@@ -296,8 +297,8 @@ body{
         height: 100%;
         padding-left: 25px;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(12, auto);
+        grid-template-rows: repeat(12, auto);
         gap: 20px;
         .status-box{
             display: flex;
@@ -736,6 +737,218 @@ body{
                         svg{
                             color: red;
                         }
+                    }
+                }
+            }
+        }
+        .budget-overview{
+            grid-row: 6/13;
+            grid-column: 1/5;
+            border: var(--main-border);
+            border-radius: var(--main-border-radius);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .title-link{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                }
+            }
+            .total-budget{
+                background-color: rgb(238, 244, 255);
+                border-radius: var(--main-border-radius);
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+                .titles{
+                    display: flex;
+                    justify-content: space-between;
+                    p:last-child{
+                        margin-left: 20px;
+                    }
+                }
+                .values{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 25px;
+                }
+                .bar-titles{
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .bar-parent{
+                    background-color: lightgray;
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 45px;
+                    div{
+                        height: 100%;
+                        width: 82.5%;
+                        background-color: var(--dark-blue);
+                    }
+                }
+            }
+            .budget-boxes{
+                border: var(--main-border);
+                border-radius: var(--main-border-radius);
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                .text-nums{
+                    display: flex;
+                    justify-content: space-between;
+                    .part1{
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+                        .logo-box{
+                            background-color: lightgray;
+                            padding: 8px;
+                            border-radius: 5px;
+                        }
+                        .text-box{
+                            p{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .part2{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 5px;
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .bar-parent{
+                    background-color: lightgray;
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 45px;
+                    div{
+                        height: 100%;
+                        width: 50%;
+                        background-color: black;
+                    }
+                }
+            }
+            .budget-boxes:nth-child(3){
+                .text-nums{
+                    .part1{
+                        .logo-box{
+                            background-color: var(--light-orange);
+                            svg{
+                                color: var(--dark-orange);
+                            }
+                        }
+                    }
+                    .part2{
+                        p{
+                            background-color: var(--light-green);
+                            color: var(--dark-green);
+                            border-radius: var(--main-border-radius);
+                            padding: 5px;
+
+                        }
+                    }
+                }
+                .bar-parent{
+                    div{
+                        background-color: var(--dark-orange);
+                    }
+                }
+            }
+            .budget-boxes:nth-child(4){
+                .text-nums{
+                    .part1{
+                        .logo-box{
+                            background-color: rgb(255, 194, 194);
+                            svg{
+                                color: red;
+                            }
+                        }
+                    }
+                    .part2{
+                        p{
+                            background-color: rgb(255, 219, 219);
+                            color: rgb(116, 0, 0);
+                            border-radius: var(--main-border-radius);
+                            padding: 5px;
+
+                        }
+                    }
+                }
+                .bar-parent{
+                    div{
+                        background-color: red;
+                        width: 100%;
+                    }
+                }
+            }
+            .budget-boxes:nth-child(5){
+                .text-nums{
+                    .part1{
+                        .logo-box{
+                            background-color: rgb(252, 231, 243);
+                            svg{
+                                color: rgb(230, 0, 118);
+                            }
+                        }
+                    }
+                    .part2{
+                        p{
+                            background-color: lightyellow;
+                            color: rgb(102, 102, 36);
+                            border-radius: var(--main-border-radius);
+                            padding: 5px;
+
+                        }
+                    }
+                }
+                .bar-parent{
+                    div{
+                        background-color: rgb(246, 51, 154);
+                        width: 80%;
+                    }
+                }
+            }
+            .budget-boxes:nth-child(6){
+                .text-nums{
+                    .part1{
+                        .logo-box{
+                            background-color: var(--light-green);
+                            svg{
+                                color: var(--dark-green);
+                            }
+                        }
+                    }
+                    .part2{
+                        p{
+                            background-color: var(--light-green);
+                            color: var(--dark-green);
+                            border-radius: var(--main-border-radius);
+                            padding: 5px;
+
+                        }
+                    }
+                }
+                .bar-parent{
+                    div{
+                        background-color: var(--dark-green);
+                        width: 86%;
                     }
                 }
             }
