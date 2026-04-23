@@ -16,11 +16,20 @@
     --main-border-radius: 15px
 }
 
+body{
+    svg{
+    width: 20px;
+    img{
+        width: 20px;
+    }
+}
+}
+
 .whole-page{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    position: relative;
+    /* position: relative; */
     .sidebar{
         height: 100vh;
         min-width: 14vw;
@@ -411,7 +420,7 @@
             grid-column: 5/13;
             display: flex;
             flex-direction: column;
-            row-gap: 30px;
+            row-gap: 36px;
             border: var(--main-border);
             border-radius: var(--main-border-radius);
             padding: 25px;
@@ -421,6 +430,11 @@
             .title-link{
                 display: flex;
                 justify-content: space-between;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 14px;
+                }
             }
             .rows{
                 display: flex;
@@ -484,14 +498,30 @@
                 .date{
                     min-width: 100px;
                 }
-                .statue{
-                    background-color: gray;
+                .status{
+                    background-color: var(--light-green);
+                    color: var(--dark-green);
                     min-width: 45px;
                     height: 24px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border-radius: 15px;
+                }
+                .amount{
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+            .transaction-rows:nth-child(3){
+                .type{
+                    .box{
+                        background-color: var(--light-green);
+                        color: var(--dark-green);
+                    }
+                }
+                .amount{
+                    color: var(--dark-green);
                 }
             }
             .transaction-rows:nth-child(4){
@@ -501,6 +531,12 @@
                         svg{
                             color: var(--dark-orange);
                         }
+                    }
+                }
+                .type{
+                    .box{
+                        background-color: var(--light-orange);
+                        color: var(--dark-orange);
                     }
                 }
             }
@@ -513,6 +549,31 @@
                         }
                     }
                 }
+                .type{
+                    .box{
+                        background-color: var(--light-blue);
+                        color: var(--dark-blue);
+                    }
+                }
+            }
+            .transaction-rows:nth-child(6){
+                .type{
+                    .box{
+                        background-color: var(--light-blueviolet);
+                        color: var(--dark-blueviolet);
+                    }
+                }
+            }
+            .transaction-rows:nth-child(7){
+                .type{
+                    .box{
+                        background-color: var(--light-green);
+                        color: var(--dark-green);
+                    }
+                }
+                .amount{
+                    color: var(--dark-green);
+                }
             }
             .transaction-rows:nth-child(8){
                 .to-whom{
@@ -523,6 +584,16 @@
                         }
                     }
                 }
+                .type{
+                    .box{
+                        background-color: rgb(255, 210, 210);
+                        color: red;
+                    }
+                }
+                .status{
+                    background-color: rgb(255, 255, 120);
+                    color: rgb(126, 126, 0);
+                }
             }
             .transaction-rows:nth-child(9){
                 .to-whom{
@@ -531,6 +602,12 @@
                         svg{
                             color: var(--dark-blueviolet);
                         }
+                    }
+                }
+                .type{
+                    .box{
+                        background-color: var(--light-blue);
+                        color: var(--dark-blue);
                     }
                 }
             }
@@ -543,6 +620,12 @@
                         }
                     }
                 }
+                .type{
+                    .box{
+                        background-color: lightcyan;
+                        color: darkcyan;
+                    }
+                }
             }
             .transaction-rows:nth-child(11){
                 .to-whom{
@@ -550,6 +633,108 @@
                         background-color: var(--light-green);
                         svg{
                             color: var(--dark-green);
+                        }
+                    }
+                }
+                .type{
+                    .box{
+                        background-color: var(--light-green);
+                        color: var(--dark-green);
+                    }
+                }
+            }
+        }
+        .monthly-receipts{
+            grid-row: 4/6;
+            grid-column: 1/5;
+            border: var(--main-border);
+            border-radius: var(--main-border-radius);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 25px;
+            .title-link{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            .second-title-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    font-size: 28px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .spending-types{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+                .type-box{
+                    width: calc((100% - 25px) / 2);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 2px;
+                    .logo-box{
+                        background-color: gray;
+                        padding: 8px;
+                        border-radius: 8px;
+                        svg{
+                            width: 18px;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .type-box:first-child{
+                    .logo-box{
+                        background-color: var(--light-blue);
+                        svg{
+                            color: var(--dark-blue);
+                        }
+                    }
+                    p:last-child{
+                        color: red;
+                    }
+                }
+                .type-box:nth-child(2){
+                    .logo-box{
+                        background-color: rgb(255, 255, 190);
+                        svg{
+                            color: rgb(158, 158, 0);
+                        }
+                    }
+                    p:last-child{
+                        color: red;
+                    }
+                }
+                .type-box:nth-child(3){
+                    .logo-box{
+                        background-color: var(--light-green);
+                        svg{
+                            color: var(--dark-green);
+                        }
+                    }
+                    p:last-child{
+                        color: var(--dark-green);
+                    }
+                }
+                .type-box:nth-child(4){
+                    .logo-box{
+                        background-color: rgb(255, 224, 224);
+                        svg{
+                            color: red;
                         }
                     }
                 }
