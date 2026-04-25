@@ -3,3 +3,187 @@
         margin-right: 250px;
     }
 }
+
+
+@media screen and (max-width: 1279px){
+    .whole-page{
+        margin-right: 100px;
+        .sidebar{
+            width: 70px;
+            min-width: 70px;
+            padding: 0; 
+            padding-right: 10px;
+            padding-top: 10px;
+            margin: 0;
+            .main{
+                width: fit-content;
+                .logo{
+                    svg{
+                        width: 15px;
+                    }
+                }
+                .text-box{
+                    display: none;
+                    width: fit-content;
+                }
+            }
+            .main-links{
+                width: fit-content;
+                a{
+                    width: fit-content;
+                    svg{
+                        width: 15px;
+                    }
+                    h3{
+                        display: none;
+                    }
+                }
+            }
+            .quick-procedures-title{
+                display: none;
+            }
+            .quick-procedures{
+                width: fit-content;
+                a{
+                    width: fit-content;
+                    .logo-box{
+                        width: fit-content;
+                        svg{
+                            width: 12px;
+                        }
+                    }
+                    h5{
+                        display: none;
+                    }
+                }
+            }
+        }
+        section{
+            .newest-activities{
+                grid-column: 1/5;
+                grid-row: 2/4;
+            }
+            .comparing-box{
+                grid-column: 5/13;
+                grid-row: 2/4;
+            }
+            .last-transaction{
+                grid-row: 4/6;
+                grid-column: 1/13;
+            }
+            .monthly-receipts{
+                grid-column: 1/5;
+                grid-row: 6/7;
+                
+            }
+            .summary{
+                grid-column: 5/13;
+                grid-row: 6/7;
+            }
+            .budget-overview{
+                grid-column: 1/6;
+                grid-row: 7/13;
+            }
+            .payment-methods{
+                grid-column: 6/13;
+                grid-row: 7/13;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .whole-page{
+        margin-right: 15px;
+        .sidebar{
+            width: 70px;
+            min-width: 70px;
+            padding: 0; 
+            padding-right: 10px;
+            padding-top: 10px;
+            margin: 0;
+            display: none;
+            .main{
+                width: fit-content;
+                .logo{
+                    svg{
+                        width: 15px;
+                    }
+                }
+                .text-box{
+                    display: none;
+                    width: fit-content;
+                }
+            }
+            .main-links{
+                width: fit-content;
+                a{
+                    width: fit-content;
+                    svg{
+                        width: 15px;
+                    }
+                    h3{
+                        display: none;
+                    }
+                }
+            }
+            .quick-procedures-title{
+                display: none;
+            }
+            .quick-procedures{
+                width: fit-content;
+                a{
+                    width: fit-content;
+                    .logo-box{
+                        width: fit-content;
+                        svg{
+                            width: 12px;
+                        }
+                    }
+                    h5{
+                        display: none;
+                    }
+                }
+            }
+        }
+        section{
+            .status-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div{
+                    width: 100%;
+                }
+            }
+            .newest-activities{
+                grid-row: 2/4;
+                grid-column: 1/13;
+            }
+            .last-transaction{
+                grid-row: 4/5;
+                grid-column: 1/13;
+            }
+            .monthly-receipts{
+                grid-row: 5/6;
+                grid-column: 1/13;   
+            }
+            .budget-overview{
+                grid-row: 6/7;
+                grid-column: 1/13;
+            }
+            .comparing-box{
+                grid-row: 7/8;
+                grid-column: 1/13;
+            }
+            .summary{
+                grid-row: 8/9;
+                grid-column: 1/13;
+            }
+            .payment-methods{
+                grid-row: 9/10;
+                grid-column: 1/13;
+            }
+        }
+    }
+}
