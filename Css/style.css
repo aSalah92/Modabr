@@ -1188,15 +1188,91 @@ body{
                                 }
                             }
                         }
+                        .fourteen-nums{
+                            font-size: 22px;
+                            font-weight: 500;
+                        }
+                        .card-info{
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 13px;
+                            .card-expiry{
+                                p:last-child{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
                     }
                     .back-face{
                         background-color: rgb(11, 18, 33);
                         color: white;
                         transform: rotateY(180deg);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        .black-box{
+                            background: linear-gradient(to right, rgb(6, 6, 6), rgb(42, 42, 42));
+                            width: 100%;
+                            height: 35px;
+                        }
+                        p{
+                            font-size: 10px;
+                        }
+                        .white-box{
+                            background-color: white;
+                            width: 100%;
+                            height: 25px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .inner-box{
+                                background: linear-gradient(to left, rgb(207, 207, 207), rgb(255, 255, 255));
+                                width: 80%;
+                                height: 50%;
+                            }
+                            p{
+                                color: black;
+                                font-size: 12px;
+                                font-weight: 700;
+                                margin-left: 25px;
+                            }
+                        }
+                        p:nth-child(4){
+                            align-self: flex-end;
+                            font-size: 15px;
+                            margin-left: 25px;
+                        }
+                        .three-nums-box{
+                            background-color: white;
+                            color: black;
+                            width: fit-content;
+                            height: fit-content;
+                            align-self: flex-end;
+                            font-size: 14px;
+                            font-weight: 700;
+                            padding: 8px 15px;
+                            border-radius: 8px;
+                        }
                     }
                 }
                 &:hover .card{
                     transform: rotateY(180deg);
+                }
+            }
+            .container:nth-child(3){
+                .card{
+                    .front-face{
+                        background-color: rgb(143, 25, 31);
+                    }
+                }
+            }
+            .container:nth-child(4){
+                .card{
+                    .back-face{
+                        p:nth-child(4){
+                            margin-left: 50px;
+                        }
+                    }
                 }
             }
         }
